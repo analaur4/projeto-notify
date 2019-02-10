@@ -1,7 +1,10 @@
 body{
-    margin: 0;
     border-top: 8px solid;
     border-top-color: #1DB954;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 100%;
 }
 
 .grid{
@@ -120,7 +123,6 @@ span{
     width: 35px;
 }
 
-
 .sidebar-c1, .sidebar-c2, .sidebar-c3 {
     text-align: center;
     height: 150px;
@@ -221,7 +223,22 @@ section p:nth-child(2){
 
 section .section-img{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+section .section-img2{
+    background-color: #1DB954;
+    height: 48px;
+    width: 48px;
+}
+
+section .section-img img{
+    height: 100%;
+}
+
+section .section-img img:hover{
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 section p:nth-child(4){
@@ -267,13 +284,6 @@ section .section-icons2{
     cursor: pointer;
 }
 
-section .section-img img:hover{
-    color: #1DB954;
-    opacity: 0.5;
-    cursor: pointer;
-    z-index: 1;
-}
-
 footer{
     align-items: center;
     background-color: lightgrey;
@@ -299,9 +309,159 @@ footer p{
 }
 
 footer p:hover{
+    color: #1DB954;
     cursor: pointer;
 }
 
-@media(min-width: 768px){
-    
+.menu-hamburguer{
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    flex-direction: column; 
+    justify-content: center;
+    width: 30px;
 }
+.traco{
+    background-color: white;
+    border-radius: 0 30px;
+    height: 3px;
+    margin: 3px 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header{
+    align-items: center;
+    background-image: url(banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    grid-area: header;
+    height: 250px;
+    justify-content: center;
+    width: 100%;
+    }
+
+    .hand-header{
+        display: none;
+    }
+
+    .it-header{
+        padding: 10px 0 0 0;
+        text-align: center;
+    }
+
+    .icones-header{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    header .it-header p:nth-child(1){
+        color: black;
+        font-family: 'Pacifico', cursive;
+        font-size: 28pt;
+    }
+
+    .it-header p:nth-child(2){
+        display: none;
+    }
+
+    .sidebar{
+        padding: 25px 0;
+    }
+
+    .sidebar-icones img{
+        background-color: #1DB954;
+        border: 1px solid #1DB954;
+        border-radius: 100%;
+        display: flex;
+        height: 25px;
+        padding: 10px;
+        width: 25px;
+    }
+
+    .sidebar-c1, .sidebar-c2, .sidebar-c3{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sidebar-c1 p:nth-child(2), .sidebar-c2 p:nth-child(2), .sidebar-c3 p:nth-child(2){
+        font-family: sans-serif;
+        font-size: 12pt;
+    }
+
+    .sidebar-c1 p:nth-child(3), .sidebar-c2 p:nth-child(3), .sidebar-c3 p:nth-child(3){
+        display: none;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        padding: 25px 0;
+        width: 100%;
+    }
+    
+    main .main-texto{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        justify-content: center;
+        width: 250px;
+    }
+
+    main .main-texto p:nth-child(2){
+        display: none;
+    }
+
+    video{
+        display: none;
+    }
+
+    
+    main .main-texto .input-email{
+        width: auto;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        padding: 25px 0;
+        width: 100%;
+    }
+
+    section .section-conteudo{
+        text-align: center;
+        width: 100%;
+    }
+
+    section .section-img{
+        display: none;
+    }
+
+    section p:nth-child(1), section p:nth-child(5){
+        display: none;
+    }
+    
+    section p:nth-child(2){
+        display: none;
+    }
+
+    footer{
+        padding: 25px 0;
+    }
+
+    footer .footer-conteudo{
+        width: 100%;
+    }
+}
+
